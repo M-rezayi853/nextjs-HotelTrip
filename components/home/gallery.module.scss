@@ -1,0 +1,14 @@
+@import '../../sass/variables.scss';
+
+.gallery {
+  display: flex;
+
+  .item {
+    display: flex;
+  }
+
+  .photo {
+    width: 100%;
+    display: block;
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../../sass/variables.scss';
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem;
+  }
+
+  .item::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.7rem;
+
+    // Older browsers
+    background-image: url(/images/SVG/chevron-thin-right.svg);
+    background-size: cover;
+
+    // Newer browsers - masks
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(/images/SVG/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(/images/SVG/chevron-thin-right.svg);
+      mask-size: cover;
+      background-image: none;
+    }
+  }
+}
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-small) {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 1rem;
+  }
+
+  .count {
+    margin-right: auto;
+  }
+
+  .friends {
+    display: flex;
+  }
+
+  .photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+
+    img {
+      border-radius: 50rem;
+      border: 0.3rem solid #fff !important;
+    }
+
+    &:not(:last-child) {
+      margin-right: -2rem;
+    }
+  }
+}

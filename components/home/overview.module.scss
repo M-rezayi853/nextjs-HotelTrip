@@ -1,0 +1,78 @@
+@import '../../sass/variables.scss';
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: var(--line);
+
+  .heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
+  }
+
+  .stars {
+    margin-right: auto;
+    display: flex;
+  }
+
+  .iconStar,
+  .iconLocation {
+    height: 2.50rem;
+    width: 2.50rem;
+    fill: var(--color-primary);
+  }
+
+  .location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .iconLocation {
+    margin-right: 0.5rem;
+  }
+
+  .rating {
+    background-color: var(--color-primary);
+    color: #fff;
+    margin-left: 3rem;
+    padding: 0 2.25rem;
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
+  }
+
+  .ratingAverage {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -0.3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .ratingCount {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 0.5rem;
+    }
+  }
+}
