@@ -43,7 +43,7 @@ function Header() {
         <div className={styles.user}>
           <div className={styles.userPhoto}>
             <Image
-              src='/images/user.jpg'
+              src='/images/user.png'
               alt='User photo'
               width={40}
               height={40}

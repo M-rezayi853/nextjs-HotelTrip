@@ -14,7 +14,7 @@ function DetailUserReviews() {
         <figcaption className={styles.user}>
           <div className={styles.photo}>
             <Image
-              src='/images/user-1.jpg'
+              src='/images/user-1.png'
               alt='User 1'
               width={45}
               height={45}
@@ -36,7 +36,7 @@ function DetailUserReviews() {
         <figcaption className={styles.user}>
           <div className={styles.photo}>
             <Image 
-              src='/images/user-2.jpg' 
+              src='/images/user-2.png' 
               alt='User 2' 
               width={45} 
               height={45} 
